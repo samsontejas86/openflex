@@ -1,0 +1,193 @@
+/* Smooth Animations and Transitions */
+
+/* Page transition animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animations to elements */
+.control-panel {
+    animation: fadeInLeft 0.3s ease-out !important;
+}
+
+.control-section {
+    animation: fadeIn 0.3s ease-out !important;
+}
+
+.gallery-grid {
+    animation: fadeInScale 0.4s ease-out !important;
+}
+
+.gallery-card {
+    animation: fadeInUp 0.4s ease-out backwards !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Staggered animation for gallery cards */
+.gallery-card:nth-child(1) {
+    animation-delay: 0.05s !important;
+}
+
+.gallery-card:nth-child(2) {
+    animation-delay: 0.1s !important;
+}
+
+.gallery-card:nth-child(3) {
+    animation-delay: 0.15s !important;
+}
+
+.gallery-card:nth-child(4) {
+    animation-delay: 0.2s !important;
+}
+
+.gallery-card:nth-child(5) {
+    animation-delay: 0.25s !important;
+}
+
+.gallery-card:nth-child(6) {
+    animation-delay: 0.3s !important;
+}
+
+.gallery-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+    transform: translateY(-4px) !important;
+    border-color: #d0d0d0 !important;
+}
+
+.microscope-viewer {
+    animation: fadeIn 0.4s ease-out !important;
+}
+
+/* Enhanced button transitions */
+.move-button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.move-button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(214, 31, 105, 0.3) !important;
+}
+
+.add-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.add-btn:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 2px 8px rgba(46, 204, 113, 0.3) !important;
+}
+
+.speed-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.speed-btn:hover {
+    transform: translateY(-1px) !important;
+}
+
+.delete-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.delete-btn:hover {
+    transform: scale(1.1) !important;
+}
+
+/* Sidebar item animations */
+.sidebar-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.sidebar-item:hover {
+    transform: translateX(2px) !important;
+}
+
+.sidebar-item.active {
+    animation: pulse 0.3s ease-out !important;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Input field focus animations */
+.coordinate-input {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.coordinate-input:focus {
+    transform: scale(1.02) !important;
+    box-shadow: 0 0 0 3px rgba(214, 31, 105, 0.1) !important;
+}
+
+/* Section header hover */
+.section-header {
+    transition: all 0.2s ease-out !important;
+}
+
+/* Menu animations */
+.menu-item>span {
+    transition: all 0.2s ease-out !important;
+}
+
+.menu-option {
+    transition: all 0.15s ease-out !important;
+}
+
+.menu-option:hover {
+    transform: translateX(4px) !important;
+}

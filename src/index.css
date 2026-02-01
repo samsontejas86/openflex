@@ -1,0 +1,78 @@
+:root {
+  --font-sans: 'Manrope', 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --text-xs: 0.72rem;
+  --text-sm: 0.82rem;
+  --text-md: 0.92rem;
+  --text-lg: 1.02rem;
+  --text-xl: 1.18rem;
+  --text-2xl: 1.36rem;
+
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #333333;
+  background-color: #ffffff;
+
+  --primary-pink: #d61f69;
+  /* Based on the uploaded screenshot reference */
+  --primary-pink-hover: #b81758;
+  --bg-white: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--bg-white);
+  font-size: 15px;
+}
+
+h1 {
+  font-size: 2.4em;
+  line-height: 1.1;
+  color: #1a1a1a;
+}
+
+button {
+  border-radius: 4px;
+  /* Flatter look from screenshot */
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  font-family: inherit;
+  background-color: var(--primary-pink);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: var(--primary-pink-hover);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--primary-pink);
+  outline-offset: 2px;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}

@@ -1,0 +1,81 @@
+/* Additional Performance Optimizations for Dark Mode */
+
+/* Hardware acceleration for smooth transitions */
+.dark-mode .gallery-card,
+.dark-mode .control-section,
+.dark-mode .dropdown-menu,
+.dark-mode .sidebar-item,
+.dark-mode .menu-option {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Reduce animation during theme switch */
+.main-page.dark-mode * {
+    animation-duration: 0.4s !important;
+}
+
+/* Optimize backdrop-filter performance */
+@supports (backdrop-filter: blur(10px)) {
+
+    .dark-mode .control-section,
+    .dark-mode .gallery-card,
+    .dark-mode .dropdown-menu {
+        will-change: backdrop-filter, background-color;
+    }
+}
+
+/* Smooth scroll in dark mode */
+.dark-mode .gallery-grid,
+.dark-mode .control-panel {
+    scroll-behavior: smooth;
+}
+
+/* Prevent flicker during transitions */
+.dark-mode .gallery-card,
+.dark-mode .control-section {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+/* Optimize text rendering in dark mode */
+.dark-mode {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth color transitions for text elements */
+.dark-mode .gallery-filename,
+.dark-mode .gallery-timestamp,
+.dark-mode .section-header,
+.dark-mode .input-label {
+    transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced glassmorphism with smooth transition */
+.dark-mode .control-section::before,
+.dark-mode .gallery-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-mode .control-section:hover::before,
+.dark-mode .gallery-card:hover::before {
+    opacity: 1;
+}
+
+/* Ensure relative positioning for pseudo-elements */
+.dark-mode .control-section,
+.dark-mode .gallery-card {
+    position: relative;
+}
