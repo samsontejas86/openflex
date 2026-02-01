@@ -56,6 +56,18 @@
     border-right-color: var(--border-color);
 }
 
+.dark-mode .main-content.view-active {
+    background-color: var(--bg-primary);
+}
+
+.dark-mode .empty-viewer {
+    background-color: var(--bg-primary);
+}
+
+.dark-mode .image-viewer-container {
+    background-color: var(--bg-primary);
+}
+
 .dark-mode .sidebar-item {
     color: var(--text-secondary);
 }

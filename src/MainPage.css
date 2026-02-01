@@ -117,6 +117,14 @@
     display: none;
 }
 
+.main-content.view-active .control-panel {
+    display: none;
+}
+
+.main-content.view-active {
+    background-color: #f5f5f5;
+}
+
 /* Sidebar */
 .sidebar {
     width: 70px;
@@ -635,7 +643,7 @@
 /* Empty Viewer for View Section */
 .empty-viewer {
     flex: 1;
-    background-color: #fafafa;
+    background-color: #f5f5f5;
 }
 
 /* Image Viewer Container */
@@ -643,7 +651,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    background-color: #1a1a1a;
+    background-color: #f5f5f5;
     overflow: hidden;
 }
 

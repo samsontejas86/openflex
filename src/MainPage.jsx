@@ -172,7 +172,7 @@ export default function MainPage() {
                 </button>
             </header>
 
-            <div className={`main-content ${activeSection === 'gallery' ? 'gallery-active' : ''} ${activeSection === 'view' && selectedImage ? 'view-active' : ''}`}>
+            <div className={`main-content ${activeSection === 'gallery' ? 'gallery-active' : ''} ${activeSection === 'view' ? 'view-active' : ''}`}>
                 {/* Left Sidebar */}
                 <aside className="sidebar">
                     <button
