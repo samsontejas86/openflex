@@ -5,6 +5,7 @@ import './DarkMode.css';
 import './DarkModeOptimizations.css';
 import { AboutIcon, CaptureIcon, GalleryIcon, LoggingIcon, NavigateIcon, SettingsIcon, StorageIcon, ViewIcon } from './Icons';
 import './MainPage.css';
+import logo from './assets/flexlogo.png';
 
 export default function MainPage() {
     const [activeSection, setActiveSection] = useState('navigate');
@@ -92,6 +93,10 @@ export default function MainPage() {
         <div className={`main-page ${darkMode ? 'dark-mode' : ''}`}>
             {/* Header */}
             <header className="main-header">
+                <div className="header-left">
+                    <img src={logo} alt="Vyupath Flexture" className="header-logo" />
+                    <h1 className="header-title">Vyupath Flexture Microscope</h1>
+                </div>
                 <div className="header-menu" onMouseLeave={closeMenu}>
                     <div className="menu-item" onMouseEnter={() => handleMenuHover('edit')}>
                         <span>Edit</span>

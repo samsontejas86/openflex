@@ -19,6 +19,14 @@
     border-bottom-color: var(--border-color);
 }
 
+.dark-mode .header-logo {
+    filter: brightness(1.2) contrast(1.1);
+}
+
+.dark-mode .header-title {
+    color: var(--text-primary);
+}
+
 .dark-mode .header-menu,
 .dark-mode .menu-item>span {
     color: var(--text-primary);

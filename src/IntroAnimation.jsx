@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './IntroAnimation.css';
-import logo from './assets/logo_openflexure_emblem_pink.svg';
+import logo from './assets/flexlogo.png';
 
 export default function IntroAnimation({ onConnect }) {
   const [showTitle, setShowTitle] = useState(false);
@@ -45,7 +45,7 @@ export default function IntroAnimation({ onConnect }) {
         />
         <div className={`text-container ${showTitle ? 'visible' : ''}`}>
           <h1 className="title-text">
-            Open Flexture Connect
+            Vyupath Flexture Microscope
           </h1>
           <div className="loading-bar">
             <div className="loading-progress"></div>
